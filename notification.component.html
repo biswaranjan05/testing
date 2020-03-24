@@ -1,0 +1,97 @@
+<div *ngFor="let data of datas">
+  <ion-card >
+    <ion-grid>
+      <ion-row>
+        <ion-col style="color: grey;"size-md="1" size-lg="1" size-sm="2" >
+        <ion-avatar ><img src='{{data.icon}}'></ion-avatar>
+        </ion-col>
+      </ion-row>
+     
+      <ion-row>
+        <ion-col size="7" offset="3">
+        <strong>  {{data.name}} </strong>
+
+        </ion-col>
+      </ion-row>
+
+       <ion-row>
+        <ion-col size="5" offset="3" >
+
+          <!-- <div *ngIf='cond' limit="20"> 
+
+          </div> -->
+
+         
+
+          <div id="expandWrapper" class="expand-wrapper" [class.collapsed]="!data.text.Expanded">
+          {{data.text}}
+          <ion-button (click)='condition=true' > Show More </ion-button>  
+          </div>
+        </ion-col>
+      </ion-row> 
+
+      <ion-row>
+        <ion-col size="4" offset="9">
+          {{data.date}}
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </ion-card>
+</div>
+
+
+
+<!-- <ion-card style="height: 350px;width: 100%;; color: antiquewhite;">
+  <ion-item>
+<ion-row>
+  <ion-col size="8">
+  <ion-avatar > <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjAwMzc5OTEzOF5BMl5BanBnXkFtZTgwMDc5ODU3MTE@._V1_UX172_CR0,0,172,256_AL_.jpg"></ion-avatar>&nbsp;
+  <ion-text>Checked</ion-text>
+</ion-col>
+<ion-col size="4" >
+<ion-text >17/03/2020</ion-text>
+</ion-col>
+</ion-row>
+</ion-item>
+
+<ion-item>
+<ion-row>
+<ion-col size="6">
+ <ion-avatar ><img src="https://faces.design/faces/w/w9.png"></ion-avatar>&nbsp;
+  <ion-text>This cart is Empty</ion-text>
+</ion-col>
+<ion-col size="6">
+  <ion-text>17/03/2020</ion-text>
+  </ion-col>
+</ion-row>
+</ion-item>
+
+<ion-item>
+  <ion-row>
+<ion-col size="12">
+  <ion-avatar> <img src="https://randomuser.me/api/portraits/women/79.jpg" ></ion-icon>&nbsp;
+  <ion-text>Cut Something </ion-text>
+</ion-col>
+</ion-row>
+</ion-item>
+
+<ion-item>
+  <ion-row>
+<ion-col size="12">
+  <ion-icon style="font-size:xx-large;" name="football" ></ion-icon>&nbsp;
+  <ion-text>Play Hard</ion-text>
+</ion-col>
+</ion-row>
+</ion-item>
+
+<ion-item>
+  <ion-row>
+<ion-col size="12">
+  <ion-icon style="font-size:xx-large;" name="heart" ></ion-icon>&nbsp;
+  <ion-text>Heart Attack</ion-text>
+</ion-col>
+</ion-row>
+</ion-item>
+
+</ion-card> -->
