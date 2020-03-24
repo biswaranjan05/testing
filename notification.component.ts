@@ -68,7 +68,8 @@ export class NotificationComponent implements OnInit {
     'date':'17/03/2020'
   }
  ]
-  
+   
+  condition = true
 
 
   constructor() { }
